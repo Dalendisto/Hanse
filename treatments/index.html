@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <link rel="stylesheet" href="/style.css">
+    
+    <link rel="preload" href="/elm.js" as="script">
+    <link rel="modulepreload" href="/index.js">
+    
+    <script defer="defer" src="/elm.js" type="text/javascript"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script type="module">
+import userInit from"/index.js";
+let prefetchedPages=[window.location.pathname],initialLocationHash=document.location.hash.replace(/^#/,"");function loadContentAndInitializeApp(){let a=window.location.pathname.replace(/(w)$/,"$1/");a.endsWith("/")||(a+="/");const b=Elm.TemplateModulesBeta.init({flags:{secrets:null,baseUrl:document.baseURI,isPrerendering:!1,isDevServer:!1,isElmDebugMode:!1,contentJson:JSON.parse(document.getElementById("__ELM_PAGES_DATA__").innerHTML),userFlags:userInit.flags()}});return b.ports.toJsPort.subscribe(()=>{loadNamedAnchor()}),b}function loadNamedAnchor(){if(""!==initialLocationHash){const a=document.querySelector(`[name=${initialLocationHash}]`);a&&a.scrollIntoView()}}function prefetchIfNeeded(a){if(a.host===window.location.host&&!prefetchedPages.includes(a.pathname)){prefetchedPages.push(a.pathname),console.log("Preloading...",a.pathname);const b=document.createElement("link");b.setAttribute("as","fetch"),b.setAttribute("rel","prefetch"),b.setAttribute("href",origin+a.pathname+"/content.json"),document.head.appendChild(b)}}const appPromise=new Promise(function(a){document.addEventListener("DOMContentLoaded",()=>{a(loadContentAndInitializeApp())})});userInit.load(appPromise),"function"==typeof connect&&connect(function(a){appPromise.then(b=>{b.ports.fromJsPort.send({contentJson:a})})});const trigger_prefetch=b=>{const c=find_anchor(b.target);c&&c.href&&c.hasAttribute("elm-pages:prefetch")&&prefetchIfNeeded(c)};let mousemove_timeout;const handle_mousemove=a=>{clearTimeout(mousemove_timeout),mousemove_timeout=setTimeout(()=>{trigger_prefetch(a)},20)};addEventListener("touchstart",trigger_prefetch),addEventListener("mousemove",handle_mousemove);function find_anchor(a){for(;a&&"A"!==a.nodeName.toUpperCase();)a=a.parentNode;return a}
+    </script>
+    <title>Behandlungen</title>
+    <meta name="generator" content="elm-pages v2.1.9">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <link rel="canonical" href="https://elm-pages.com/treatments" />    <meta name="description" content="TODO" />    <meta property="og:image" content="TODO" />    <meta property="og:image:secure_url" content="TODO" />    <meta property="og:image:alt" content="elm-pages logo" />    <meta property="og:title" content="TODO title" />    <meta property="og:url" content="https://elm-pages.com/treatments" />    <meta property="og:description" content="TODO" />    <meta property="og:site_name" content="elm-pages" />    <meta property="twitter:card" content="summary" />    <meta property="twitter:title" content="TODO title" />    <meta property="twitter:description" content="TODO" />    <meta property="twitter:image" content="TODO" />    <meta property="twitter:image:alt" content="elm-pages logo" />    <meta property="og:type" content="website" />    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <script id="__ELM_PAGES_DATA__" type="application/json">{"staticData":{"170181487":"{\"parsedFrontmatter\":{\"title\":\"Brustangleichungen\",\"description\":\"Ihre unterschiedlich gro\u00DFen Br\u00FCste belasten Sie? In einer brustangleichenden Operation kann diese Brustasymmetrie korrigiert werden. In der Regel sind die K\u00F6rperh\u00E4lften nicht identisch, allerdings sind die Unterschiede h\u00E4ufig \u00E4sthetisch nicht auffallend. Bei der Anisomastie ist der Unterschied stark und kann korrigiert werden.\",\"author\":\"Hanse-Aesthetik\",\"published\":\"2022-01-30\",\"image\":\"\"}}","543555217":"{\"parsedFrontmatter\":{\"title\":\"Kinnkorrektur\",\"description\":\"Ihr Profil sagt Ihnen nicht zu? Viele unserer Patienten leiden unter einem fliehenden oder zu markanten Kinn. Die Profilachse des Gesichts definiert sich durch Augenbrauenvorsprung, Nase und Kinn. Sticht das Kinn zu stark hervor oder verschwindet optisch, kann eine Kinnkorrektur Abhilfe schaffen.\",\"author\":\"Hanse-Aesthetik\",\"published\":\"2022-01-30\",\"image\":\"\"}}","885875758":"{\"parsedFrontmatter\":{\"title\":\"Ohrenkorrektur - Otoplastik\",\"description\":\"Ihre Ohren stechen besonders hervor? Abstehende Ohren, auch \\\"Segelohren\\\" genannt, sind der h\u00E4ufigste Ausgangspunkt einer Ohrenkorrektur. Verschiedenste Techniken in der Ohranlegeplastik erm\u00F6glichen ein \u00E4sthetisches, dauerhaftes Ergebnis.\",\"author\":\"Hanse-Aesthetik\",\"published\":\"2022-01-30\",\"image\":\"\"}}","1010035749":"{\"parsedFrontmatter\":{\"title\":\"Bruststraffung mit Vergr\u00F6\u00DFerung\",\"description\":\"Sie m\u00F6chten nicht nur eine straffere Brust, sondern denken auch \u00FCber eine Brustvergr\u00F6\u00DFerung nach? Bei der Bruststraffung mit Vergr\u00F6\u00DFerung kann w\u00E4hrend der Brust-Operation zus\u00E4tzlich zur Straffungsoperation ein Implantat fehlendes, k\u00F6rpereigenes Gewebe ersetzen.\",\"author\":\"Hanse-Aesthetik\",\"published\":\"2022-01-30\",\"image\":\"\"}}","1445245461":"{\"parsedFrontmatter\":{\"title\":\"Augenlidstraffung (Oberlid / Unterlid)\",\"description\":\"Haben Sie genug vom traurigen (Hunde-)Blick? \u00DCbersch\u00FCssige Haut und erschlaffte Muskelanteile im Ober- und Unterlid sind f\u00FCr den m\u00FCden und traurigen Eindruck verantwortlich. Sogenannte \\\"schwere Augen\\\" und \\\"Tr\u00E4nens\u00E4cke\\\" k\u00F6nnen mit einer Augenlidstraffung korrigiert werden.\",\"author\":\"Hanse-Aesthetik\",\"published\":\"2022-01-30\",\"image\":\"\"}}","1472913815":"{\"parsedFrontmatter\":{\"title\":\"Narbenkorrektur\",\"description\":\"Nach einem Unfall oder einer OP macht Ihnen eine Narbe Probleme? Die Narbentherapie startet mit einer genauen Befunderhebung, aus der sich Ihr pers\u00F6nlicher Narbentherapieplan ableitet. Hierbei wird entsprechend der Ergebnisse eine notwendige operative Korrektur abgew\u00E4gt.\",\"author\":\"Hanse-Aesthetik\",\"published\":\"2022-01-30\",\"image\":\"\"}}","1621664310":"[\"content/brustkorrekturen/brustangleichung.md\",\"content/brustkorrekturen/brustasymmetrie_angleichung.md\",\"content/brustkorrekturen/bruststraffung&vergr\u00F6sserung.md\",\"content/brustkorrekturen/bruststraffung.md\",\"content/brustkorrekturen/brustvergr\u00F6sserung.md\",\"content/brustkorrekturen/brustverkleinerung.md\",\"content/brustkorrekturen/korrektur_brustfehlbildung.md\",\"content/brustkorrekturen/schlupfwarzenkorrektur.md\"]","1836032950":"{\"parsedFrontmatter\":{\"title\":\"Korrektur von Brustfehlbildung\",\"description\":\"In unserer Praxisgemeinschaft korrigieren wir Brustfehlbildungen angefangen von Formabweichungen bis hin zur Korrektur einer fehlenden Brust. Hierbei werden bei der Brust-OP Kombinationen verschiedener plastisch- chirurgischer Techniken eingesetzt.\",\"author\":\"Hanse-Aesthetik\",\"published\":\"2022-01-30\",\"image\":\"\"}}","2072913678":"{\"parsedFrontmatter\":{\"title\":\"Brustverkleinerung\",\"description\":\"Sie leiden unter Ihren gro\u00DFen Br\u00FCsten? Eine Brustverkleinerung schafft Abhilfe bei sehr gro\u00DFen, h\u00E4ngenden Br\u00FCsten, die mitunter k\u00F6rperliche Beschwerden verursachen. Eine Einsch\u00E4tzung \u00FCber die m\u00F6gliche Kosten\u00FCbernahme durch die Krankenkasse kann in einem pers\u00F6nlichen Beratungsgespr\u00E4ch gegeben werden.\",\"author\":\"Hanse-Aesthetik\",\"published\":\"2022-01-30\",\"image\":\"\"}}","2318753899":"{\"parsedFrontmatter\":{\"title\":\"Nasenkorrektur\",\"description\":\"Sind Sie mit Ihrer Nase nicht zufrieden? Eine zum Gesicht passende Nase und ein \u00E4sthetisches \u00C4u\u00DFeres kann zu mehr Zufriedenheit f\u00FChren. Nach der Nasenkorrektur in unserer Praxisgemeinschaft schauen Sie sicher wieder gerne in den Spiegel.\",\"author\":\"Hanse-Aesthetik\",\"published\":\"2022-01-30\",\"image\":\"\"}}","2362425961":"{\"parsedFrontmatter\":{\"title\":\"Bruststraffung\",\"description\":\"Eine Bruststraffung kann mit der Zeit verloren gegangenes Volumen und das Durchh\u00E4ngen der Br\u00FCste ausgleichen. Bei dieser Brustoperation wird das Gewebe neu modelliert und die Position der Brust wieder nach oben verlagert.\",\"author\":\"Hanse-Aesthetik\",\"published\":\"2022-01-30\",\"image\":\"\"}}","2398889391":"{\"parsedFrontmatter\":{\"title\":\"Brustvergr\u00F6\u00DFerung\",\"description\":\"Sie w\u00FCnschen sich ein C-K\u00F6rbchen oder gr\u00F6\u00DFer? Wir beraten Sie bei Ihrer Brustvergr\u00F6\u00DFerung beispielsweise von A auf C, von A auf D. Mit der innovativen 3D Simulation von Crisalix visualisieren wir die Ergebnisse der Brustvergr\u00F6\u00DFerung vorher / nachher.\",\"author\":\"Hanse-Aesthetik\",\"published\":\"2022-01-30\",\"image\":\"\"}}","2474548294":"{\"parsedFrontmatter\":{\"title\":\"Brust-Asymmetrie / -Angleichung\",\"description\":\"Ihre unterschiedlich gro\u00DFen Br\u00FCste belasten Sie? In einer brustangleichenden Operation kann diese Brustasymmetrie korrigiert werden. In der Regel sind die K\u00F6rperh\u00E4lften nicht identisch, allerdings sind die Unterschiede h\u00E4ufig \u00E4sthetisch nicht auffallend. Bei der Anisomastie ist der Unterschied stark und kann korrigiert werden.\",\"author\":\"Hanse-Aesthetik\",\"published\":\"2022-01-30\",\"image\":\"\"}}","3218874718":"{\"parsedFrontmatter\":{\"title\":\"Stirnlifting\",\"description\":\"Sie w\u00FCnschen sich ein frisches Aussehen zur\u00FCck? Stirnfalten und abgesunkene Augenbrauen lassen Ihr Gesicht m\u00FCde und gestresst aussehen. Mit einem Stirnlift lassen sich Stirn- und Zornesfalten: Kr\u00E4henf\u00FC\u00DFe sowie h\u00E4ngende Augenbrauen korrigieren.\",\"author\":\"Hanse-Aesthetik\",\"published\":\"2022-01-30\",\"image\":\"\"}}","3235727412":"{\"parsedFrontmatter\":{\"title\":\"Augenbrauenlifting\",\"description\":\"Ein sch\u00F6ner Blick kann verzaubern... Jugendlichkeit und Frische im Gesicht wird ma\u00DFgeblich von der Augenpartie bestimmt. Kontinuierliches Absacken von Augenbrauen und Oberlidern wirkt dem entgegen. Lassen Sie Ihre Augen wieder strahlen.\",\"author\":\"Hanse-Aesthetik\",\"published\":\"2022-01-30\",\"image\":\"\"}}","3348483049":"{\"parsedFrontmatter\":{\"title\":\"Facelifting / \\\"S\\\"-Lift\",\"description\":\"Beim Blick in den Spiegel sind Sie besonders mit Wangen- und Halspartie nicht gl\u00FCcklich? Dann kann ein Facelift Ihr Weg zur\u00FCck zu einem nat\u00FCrlichen und jugendlicheren Aussehen sein. Individuelle Techniken bei der Faceliftchirurgie, wie ein Minilift / \\\"S\\\"-Lift (bei \\\"H\u00E4ngeb\u00E4ckchen\\\"), kommen hier zum Einsatz.\",\"author\":\"Hanse-Aesthetik\",\"published\":\"2022-01-30\",\"image\":\"\"}}","3465685030":"{\"parsedFrontmatter\":{\"title\":\"Schlupfwarzenkorrektur\",\"description\":\"Die Schlupfwarzenkorrektur -eingezogener Brustwarzen- ist erst bei abgeschlossener Familienplanung und wenn nicht mehr gestillt werden soll ratsam. Dann kann der einfache Eingriff unter \u00F6rtlicher Bet\u00E4ubung vorgenommen werden.\",\"author\":\"Hanse-Aesthetik\",\"published\":\"2022-01-30\",\"image\":\"\"}}","3739754750":"{\"parsedFrontmatter\":{\"title\":\"Halslifting / Halsstraffung\",\"description\":\"Auf Basis von Hautbeschaffenheit, Alter und Umfang der chirurgisch notwendigen Ma\u00DFnahme werden die individuellen Techniken und M\u00F6glichkeiten mit Ihnen besprochen. In den meisten F\u00E4llen ist eine Kombination von Face- und Halslifting empfehlenswert.\",\"author\":\"Hanse-Aesthetik\",\"published\":\"2022-01-30\",\"image\":\"\"}}","3824009947":"[\"content/gesichtskorrekturen/augenbrauenlifting.md\",\"content/gesichtskorrekturen/augenlidstraffung.md\",\"content/gesichtskorrekturen/facelifting.md\",\"content/gesichtskorrekturen/halslifting.md\",\"content/gesichtskorrekturen/kinnkorrektur.md\",\"content/gesichtskorrekturen/narbenkorrektur.md\",\"content/gesichtskorrekturen/nasenkorrektur.md\",\"content/gesichtskorrekturen/ohrenkorrektur.md\",\"content/gesichtskorrekturen/ohrl\u00E4ppchenkorrektur.md\",\"content/gesichtskorrekturen/stirnlifting.md\"]","4174940749":"{\"parsedFrontmatter\":{\"title\":\"Ohrl\u00E4ppchenkorrektur\",\"description\":\"Vom K\u00F6rperschmuck gezeichnet? Das muss nicht sein. Ausgezogene L\u00F6cher, Asymmetrien oder gespaltene Ohrl\u00E4ppchen k\u00F6nnen mit einem kleinen Eingriff mittels einer Ohrl\u00E4ppchenkorrektur behoben werden.\",\"author\":\"Hanse-Aesthetik\",\"published\":\"2022-01-30\",\"image\":\"\"}}"},"is404":false,"path":"treatments"}</script>
+    </head>
+    <body>
+      <div data-url="" display="none"></div>
+      <div class="bg-255-255-255-0 fc-0-0-0-255 font-size-20 font-open-sanshelveticaverdanasans-serif hf s e wf ui s e"><div><style>@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {.s.r > .s { flex-basis: auto !important; } .s.r > .s.ctr { flex-basis: auto !important; }}
+input[type="search"],
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
+input[type=range] {
+  -webkit-appearance: none; 
+  background: transparent;
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:10;
+  width: 100%;
+  outline: dashed 1px;
+  height: 100%;
+  opacity: 0;
+}
+
+input[type=range]::-moz-range-track {
+    background: transparent;
+    cursor: pointer;
+}
+input[type=range]::-ms-track {
+    background: transparent;
+    cursor: pointer;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    background: transparent;
+    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    opacity: 0.5;
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    border:none;
+    border-radius: 5px;
+}
+input[type=range]::-moz-range-thumb {
+    opacity: 0.5;
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    border:none;
+    border-radius: 5px;
+}
+input[type=range]::-ms-thumb {
+    opacity: 0.5;
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    border:none;
+    border-radius: 5px;
+}
+input[type=range][orient=vertical]{
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical;  /* WebKit */
+}
+
+.explain {
+    border: 6px solid rgb(174, 121, 15) !important;
+}
+.explain > .s {
+    border: 4px dashed rgb(0, 151, 167) !important;
+}
+
+.ctr {
+    border: none !important;
+}
+.explain > .ctr > .s {
+    border: 4px dashed rgb(0, 151, 167) !important;
+}
+
+html,body{height:100%;padding:0;margin:0;}.s.e.ic{display:block;}.s.e.ic.hf > img{max-height:100%;object-fit:cover;}.s.e.ic.wf > img{max-width:100%;object-fit:cover;}.s:focus{outline:none;}.ui{width:100%;height:auto;min-height:100%;z-index:0;}.ui.s.hf{height:100%;}.ui.s.hf > .hf{height:100%;}.ui > .fr.nb{position:fixed;z-index:20;}.nb{position:relative;border:none;display:flex;flex-direction:row;flex-basis:auto;}.nb.e{display:flex;flex-direction:column;white-space:pre;}.nb.e.hbh{z-index:0;}.nb.e.hbh > .bh{z-index:-1;}.nb.e.sbt > .t.hf{flex-grow:0;}.nb.e.sbt > .t.wf{align-self:auto !important;}.nb.e > .hc{height:auto;}.nb.e > .hf{flex-grow:100000;}.nb.e > .wf{width:100%;}.nb.e > .wfp{width:100%;}.nb.e > .wc{align-self:flex-start;}.nb.e.ct{justify-content:flex-start;}.nb.e > .s.at{margin-bottom:auto !important;margin-top:0 !important;}.nb.e.cb{justify-content:flex-end;}.nb.e > .s.ab{margin-top:auto !important;margin-bottom:0 !important;}.nb.e.cr{align-items:flex-end;}.nb.e > .s.ar{align-self:flex-end;}.nb.e.cl{align-items:flex-start;}.nb.e > .s.al{align-self:flex-start;}.nb.e.ccx{align-items:center;}.nb.e > .s.cx{align-self:center;}.nb.e.ccy > .s{margin-top:auto;margin-bottom:auto;}.nb.e > .s.cy{margin-top:auto !important;margin-bottom:auto !important;}.nb.a{position:absolute;bottom:100%;left:0;width:100%;z-index:20;margin:0 !important;pointer-events:none;}.nb.a > .hf{height:auto;}.nb.a > .wf{width:100%;}.nb.a > *{pointer-events:auto;}.nb.b{position:absolute;bottom:0;left:0;height:0;width:100%;z-index:20;margin:0 !important;pointer-events:none;}.nb.b > *{pointer-events:auto;}.nb.b > .hf{height:auto;}.nb.or{position:absolute;left:100%;top:0;height:100%;margin:0 !important;z-index:20;pointer-events:none;}.nb.or > *{pointer-events:auto;}.nb.ol{position:absolute;right:100%;top:0;height:100%;margin:0 !important;z-index:20;pointer-events:none;}.nb.ol > *{pointer-events:auto;}.nb.fr{position:absolute;width:100%;height:100%;left:0;top:0;margin:0 !important;pointer-events:none;}.nb.fr > *{pointer-events:auto;}.nb.bh{position:absolute;width:100%;height:100%;left:0;top:0;margin:0 !important;z-index:0;pointer-events:none;}.nb.bh > *{pointer-events:auto;}.s{position:relative;border:none;flex-shrink:0;display:flex;flex-direction:row;flex-basis:auto;resize:none;font-feature-settings:inherit;box-sizing:border-box;margin:0;padding:0;border-width:0;border-style:solid;font-size:inherit;color:inherit;font-family:inherit;line-height:1;font-weight:inherit;text-decoration:none;font-style:inherit;}.s.wrp{flex-wrap:wrap;}.s.notxt{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;}.s.cptr{cursor:pointer;}.s.ctxt{cursor:text;}.s.ppe{pointer-events:none !important;}.s.cpe{pointer-events:auto !important;}.s.clr{opacity:0;}.s.oq{opacity:1;}.s.hvclr:hover{opacity:0;}.s.hvoq:hover{opacity:1;}.s.fcsclr:focus{opacity:0;}.s.fcsoq:focus{opacity:1;}.s.atvclr:active{opacity:0;}.s.atvoq:active{opacity:1;}.s.ts{transition:transform 160ms, opacity 160ms, filter 160ms, background-color 160ms, color 160ms, font-size 160ms;}.s.sb{overflow:auto;flex-shrink:1;}.s.sbx{overflow-x:auto;}.s.sbx.r{flex-shrink:1;}.s.sby{overflow-y:auto;}.s.sby.c{flex-shrink:1;}.s.sby.e{flex-shrink:1;}.s.cp{overflow:hidden;}.s.cpx{overflow-x:hidden;}.s.cpy{overflow-y:hidden;}.s.wc{width:auto;}.s.bn{border-width:0;}.s.bd{border-style:dashed;}.s.bdt{border-style:dotted;}.s.bs{border-style:solid;}.s.t{white-space:pre;display:inline-block;}.s.it{line-height:1.05;background:transparent;text-align:inherit;}.s.e{display:flex;flex-direction:column;white-space:pre;}.s.e.hbh{z-index:0;}.s.e.hbh > .bh{z-index:-1;}.s.e.sbt > .t.hf{flex-grow:0;}.s.e.sbt > .t.wf{align-self:auto !important;}.s.e > .hc{height:auto;}.s.e > .hf{flex-grow:100000;}.s.e > .wf{width:100%;}.s.e > .wfp{width:100%;}.s.e > .wc{align-self:flex-start;}.s.e.ct{justify-content:flex-start;}.s.e > .s.at{margin-bottom:auto !important;margin-top:0 !important;}.s.e.cb{justify-content:flex-end;}.s.e > .s.ab{margin-top:auto !important;margin-bottom:0 !important;}.s.e.cr{align-items:flex-end;}.s.e > .s.ar{align-self:flex-end;}.s.e.cl{align-items:flex-start;}.s.e > .s.al{align-self:flex-start;}.s.e.ccx{align-items:center;}.s.e > .s.cx{align-self:center;}.s.e.ccy > .s{margin-top:auto;margin-bottom:auto;}.s.e > .s.cy{margin-top:auto !important;margin-bottom:auto !important;}.s.r{display:flex;flex-direction:row;}.s.r > .s{flex-basis:0%;}.s.r > .s.we{flex-basis:auto;}.s.r > .s.lnk{flex-basis:auto;}.s.r > .hf{align-self:stretch !important;}.s.r > .hfp{align-self:stretch !important;}.s.r > .wf{flex-grow:100000;}.s.r > .ctr{flex-grow:0;flex-basis:auto;align-self:stretch;}.s.r > u:first-of-type.acr{flex-grow:1;}.s.r > s:first-of-type.accx{flex-grow:1;}.s.r > s:first-of-type.accx > .cx{margin-left:auto !important;}.s.r > s:last-of-type.accx{flex-grow:1;}.s.r > s:last-of-type.accx > .cx{margin-right:auto !important;}.s.r > s:only-of-type.accx{flex-grow:1;}.s.r > s:only-of-type.accx > .cy{margin-top:auto !important;margin-bottom:auto !important;}.s.r > s:last-of-type.accx ~ u{flex-grow:0;}.s.r > u:first-of-type.acr ~ s.accx{flex-grow:0;}.s.r.ct{align-items:flex-start;}.s.r > .s.at{align-self:flex-start;}.s.r.cb{align-items:flex-end;}.s.r > .s.ab{align-self:flex-end;}.s.r.cr{justify-content:flex-end;}.s.r.cl{justify-content:flex-start;}.s.r.ccx{justify-content:center;}.s.r.ccy{align-items:center;}.s.r > .s.cy{align-self:center;}.s.r.sev{justify-content:space-between;}.s.r.lbl{align-items:baseline;}.s.c{display:flex;flex-direction:column;}.s.c > .s{flex-basis:0px;min-height:min-content;}.s.c > .s.he{flex-basis:auto;}.s.c > .hf{flex-grow:100000;}.s.c > .wf{width:100%;}.s.c > .wfp{width:100%;}.s.c > .wc{align-self:flex-start;}.s.c > u:first-of-type.acb{flex-grow:1;}.s.c > s:first-of-type.accy{flex-grow:1;}.s.c > s:first-of-type.accy > .cy{margin-top:auto !important;margin-bottom:0 !important;}.s.c > s:last-of-type.accy{flex-grow:1;}.s.c > s:last-of-type.accy > .cy{margin-bottom:auto !important;margin-top:0 !important;}.s.c > s:only-of-type.accy{flex-grow:1;}.s.c > s:only-of-type.accy > .cy{margin-top:auto !important;margin-bottom:auto !important;}.s.c > s:last-of-type.accy ~ u{flex-grow:0;}.s.c > u:first-of-type.acb ~ s.accy{flex-grow:0;}.s.c.ct{justify-content:flex-start;}.s.c > .s.at{margin-bottom:auto;}.s.c.cb{justify-content:flex-end;}.s.c > .s.ab{margin-top:auto;}.s.c.cr{align-items:flex-end;}.s.c > .s.ar{align-self:flex-end;}.s.c.cl{align-items:flex-start;}.s.c > .s.al{align-self:flex-start;}.s.c.ccx{align-items:center;}.s.c > .s.cx{align-self:center;}.s.c.ccy{justify-content:center;}.s.c > .ctr{flex-grow:0;flex-basis:auto;width:100%;align-self:stretch !important;}.s.c.sev{justify-content:space-between;}.s.g{display:-ms-grid;}.s.g > .gp > .s{width:100%;}@supports (display:grid) {.s.g{display:grid;
+}}.s.g > .s.at{justify-content:flex-start;}.s.g > .s.ab{justify-content:flex-end;}.s.g > .s.ar{align-items:flex-end;}.s.g > .s.al{align-items:flex-start;}.s.g > .s.cx{align-items:center;}.s.g > .s.cy{justify-content:center;}.s.pg{display:block;}.s.pg > .s:first-child{margin:0 !important;}.s.pg > .s.al:first-child + .s{margin:0 !important;}.s.pg > .s.ar:first-child + .s{margin:0 !important;}.s.pg > .s.ar{float:right;}.s.pg > .s.ar::after{content:"";display:table;clear:both;}.s.pg > .s.al{float:left;}.s.pg > .s.al::after{content:"";display:table;clear:both;}.s.iml{white-space:pre-wrap !important;height:100%;width:100%;background-color:transparent;}.s.implw.e{flex-basis:auto;}.s.imlp{white-space:pre-wrap !important;cursor:text;}.s.imlp > .imlf{white-space:pre-wrap !important;color:transparent;}.s.p{display:block;white-space:normal;overflow-wrap:break-word;}.s.p.hbh{z-index:0;}.s.p.hbh > .bh{z-index:-1;}.s.p .t{display:inline;white-space:normal;}.s.p .p{display:inline;}.s.p .p::after{content:none;}.s.p .p::before{content:none;}.s.p .e{display:inline;white-space:normal;}.s.p .e.we{display:inline-block;}.s.p .e.fr{display:flex;}.s.p .e.bh{display:flex;}.s.p .e.a{display:flex;}.s.p .e.b{display:flex;}.s.p .e.or{display:flex;}.s.p .e.ol{display:flex;}.s.p .e > .t{display:inline;white-space:normal;}.s.p > .r{display:inline;}.s.p > .c{display:inline-flex;}.s.p > .g{display:inline-grid;}.s.p > .s.ar{float:right;}.s.p > .s.al{float:left;}.s.hidden{display:none;}.s.w1{font-weight:100;}.s.w2{font-weight:200;}.s.w3{font-weight:300;}.s.w4{font-weight:400;}.s.w5{font-weight:500;}.s.w6{font-weight:600;}.s.w7{font-weight:700;}.s.w8{font-weight:800;}.s.w9{font-weight:900;}.s.i{font-style:italic;}.s.sk{text-decoration:line-through;}.s.u{text-decoration:underline;text-decoration-skip-ink:auto;text-decoration-skip:ink;}.s.u.sk{text-decoration:line-through underline;text-decoration-skip-ink:auto;text-decoration-skip:ink;}.s.tun{font-style:normal;}.s.tj{text-align:justify;}.s.tja{text-align:justify-all;}.s.tc{text-align:center;}.s.tr{text-align:right;}.s.tl{text-align:left;}.s.modal{position:fixed;left:0;top:0;width:100%;height:100%;pointer-events:none;}.border-0{border-width:0px;}.border-1{border-width:1px;}.border-2{border-width:2px;}.border-3{border-width:3px;}.border-4{border-width:4px;}.border-5{border-width:5px;}.border-6{border-width:6px;}.font-size-8{font-size:8px;}.font-size-9{font-size:9px;}.font-size-10{font-size:10px;}.font-size-11{font-size:11px;}.font-size-12{font-size:12px;}.font-size-13{font-size:13px;}.font-size-14{font-size:14px;}.font-size-15{font-size:15px;}.font-size-16{font-size:16px;}.font-size-17{font-size:17px;}.font-size-18{font-size:18px;}.font-size-19{font-size:19px;}.font-size-20{font-size:20px;}.font-size-21{font-size:21px;}.font-size-22{font-size:22px;}.font-size-23{font-size:23px;}.font-size-24{font-size:24px;}.font-size-25{font-size:25px;}.font-size-26{font-size:26px;}.font-size-27{font-size:27px;}.font-size-28{font-size:28px;}.font-size-29{font-size:29px;}.font-size-30{font-size:30px;}.font-size-31{font-size:31px;}.font-size-32{font-size:32px;}.p-0{padding:0px;}.p-1{padding:1px;}.p-2{padding:2px;}.p-3{padding:3px;}.p-4{padding:4px;}.p-5{padding:5px;}.p-6{padding:6px;}.p-7{padding:7px;}.p-8{padding:8px;}.p-9{padding:9px;}.p-10{padding:10px;}.p-11{padding:11px;}.p-12{padding:12px;}.p-13{padding:13px;}.p-14{padding:14px;}.p-15{padding:15px;}.p-16{padding:16px;}.p-17{padding:17px;}.p-18{padding:18px;}.p-19{padding:19px;}.p-20{padding:20px;}.p-21{padding:21px;}.p-22{padding:22px;}.p-23{padding:23px;}.p-24{padding:24px;}.v-smcp{font-variant:small-caps;}.v-smcp-off{font-variant:normal;}.v-zero{font-feature-settings:"zero";}.v-zero-off{font-feature-settings:"zero" 0;}.v-onum{font-feature-settings:"onum";}.v-onum-off{font-feature-settings:"onum" 0;}.v-liga{font-feature-settings:"liga";}.v-liga-off{font-feature-settings:"liga" 0;}.v-dlig{font-feature-settings:"dlig";}.v-dlig-off{font-feature-settings:"dlig" 0;}.v-ordn{font-feature-settings:"ordn";}.v-ordn-off{font-feature-settings:"ordn" 0;}.v-tnum{font-feature-settings:"tnum";}.v-tnum-off{font-feature-settings:"tnum" 0;}.v-afrc{font-feature-settings:"afrc";}.v-afrc-off{font-feature-settings:"afrc" 0;}.v-frac{font-feature-settings:"frac";}.v-frac-off{font-feature-settings:"frac" 0;}</style></div><div><style>
+.font-open-sanshelveticaverdanasans-serif.cap, .font-open-sanshelveticaverdanasans-serif .cap {line-height: 1;} .font-open-sanshelveticaverdanasans-serif.cap> .t, .font-open-sanshelveticaverdanasans-serif .cap > .t {vertical-align: 0;line-height: 1;}.ff-arial .font-open-sanshelveticaverdanasans-serif.cap, .ff-arial .font-open-sanshelveticaverdanasans-serif .cap {line-height: 1;} .ff-arial .font-open-sanshelveticaverdanasans-serif.cap> .t, .ff-arial .font-open-sanshelveticaverdanasans-serif .cap > .t {vertical-align: 0;line-height: 1;}
+.font-open-sanshelveticaverdanasans-serif .ff-arial.cap, .font-open-sanshelveticaverdanasans-serif .ff-arial .cap {line-height: 1;} .font-open-sanshelveticaverdanasans-serif .ff-arial.cap> .t, .font-open-sanshelveticaverdanasans-serif .ff-arial .cap > .t {vertical-align: 0;line-height: 1;}.ff-arial.cap, .ff-arial .cap {line-height: 1;} .ff-arial.cap> .t, .ff-arial .cap > .t {vertical-align: 0;line-height: 1;}.p-0-10{
+  padding: 10px 0px 10px 0px;
+}.br-15{
+  border-radius: 15px;
+}.tfrm-0-0-0-230-230-255-0-0-255-0-act:active {
+  transform: translate3d(0px, 0px, 0px) scale3d(0.9, 0.9, 1) rotate3d(0, 0, 1, 0rad);
+}.box-inset0px0px1020px510px42-157-143-255-hv:hover {
+  box-shadow: inset 0px 0px 4px 2px rgba(42,157,143,1);
+}.height-px-30px{
+  height : 30px;
+}.width-px-30{
+  width: 30px;
+}.spacing-20-20.r > .s + .s{
+  margin-left: 20px;
+}.spacing-20-20.wrp.r > .s{
+  margin: 10px 10px;
+}.spacing-20-20.c > .s + .s{
+  margin-top: 20px;
+}.spacing-20-20.pg > .s + .s{
+  margin-top: 20px;
+}.spacing-20-20.pg > .al{
+  margin-right: 20px;
+}.spacing-20-20.pg > .ar{
+  margin-left: 20px;
+}.spacing-20-20.p{
+  line-height: calc(1em + 20px);
+}textarea.s.spacing-20-20{
+  line-height: calc(1em + 20px);
+  height: calc(100% + 20px);
+}.spacing-20-20.p > .al{
+  margin-right: 20px;
+}.spacing-20-20.p > .ar{
+  margin-left: 20px;
+}.spacing-20-20.p::after{
+  content: '';
+  display: block;
+  height: 0;
+  width: 0;
+  margin-top: -10px;
+}.spacing-20-20.p::before{
+  content: '';
+  display: block;
+  height: 0;
+  width: 0;
+  margin-bottom: -10px;
+}.br-10{
+  border-radius: 10px;
+}.height-px-200px{
+  height : 200px;
+}.width-px-350{
+  width: 350px;
+}.max-width-600{
+  max-width: 600px;
+}.transparency-128{
+  opacity: 0.5;
+}.box-inset-255px255px765px255px100-100-100-255{
+  box-shadow: inset -1px 1px 3px 1px rgba(100,100,100,1);
+}.br-20{
+  border-radius: 20px;
+}.max-width-1000{
+  max-width: 1000px;
+}.b-1{
+  border-width: 1px 1px 1px 1px;
+}.spacing-0-20.r > .s + .s{
+  margin-left: 0px;
+}.spacing-0-20.wrp.r > .s{
+  margin: 10px 0px;
+}.spacing-0-20.c > .s + .s{
+  margin-top: 20px;
+}.spacing-0-20.pg > .s + .s{
+  margin-top: 20px;
+}.spacing-0-20.pg > .al{
+  margin-right: 0px;
+}.spacing-0-20.pg > .ar{
+  margin-left: 0px;
+}.spacing-0-20.p{
+  line-height: calc(1em + 20px);
+}textarea.s.spacing-0-20{
+  line-height: calc(1em + 20px);
+  height: calc(100% + 20px);
+}.spacing-0-20.p > .al{
+  margin-right: 0px;
+}.spacing-0-20.p > .ar{
+  margin-left: 0px;
+}.spacing-0-20.p::after{
+  content: '';
+  display: block;
+  height: 0;
+  width: 0;
+  margin-top: -10px;
+}.spacing-0-20.p::before{
+  content: '';
+  display: block;
+  height: 0;
+  width: 0;
+  margin-bottom: -10px;
+}.transparency-102{
+  opacity: 0.6;
+}.ls-510{
+  letter-spacing: 2px;
+}.ff-arial{
+  font-family: "Arial";
+  font-feature-settings: ;
+  font-variant: normal;
+}.fc-255-255-255-255{
+  color: rgba(255,255,255,1);
+}.p-5-0{
+  padding: 0px 5px 0px 5px;
+}.height-px-70px{
+  height : 70px;
+}.width-px-250{
+  width: 250px;
+}.bg-42-157-143-255{
+  background-color: rgba(42,157,143,1);
+}.height-px-80px{
+  height : 80px;
+}.fc-150-150-150-255{
+  color: rgba(150,150,150,1);
+}.p-15-0{
+  padding: 0px 15px 0px 15px;
+}.bg-60-60-60-255{
+  background-color: rgba(60,60,60,1);
+}.height-px-40px{
+  height : 40px;
+}.font-open-sanshelveticaverdanasans-serif{
+  font-family: "Open Sans", "Helvetica", "Verdana", sans-serif;
+  font-feature-settings: ;
+  font-variant: normal;
+}.fc-0-0-0-255{
+  color: rgba(0,0,0,1);
+}.bg-255-255-255-0{
+  background-color: rgba(255,255,255,0);
+}.focus-within:focus-within{
+  box-shadow: 0px 0px 0px 3px rgba(155,203,255,1);
+  outline: none;
+}.s:focus .focusable, .s.focusable:focus, .ui-slide-bar:focus + .s .focusable-thumb{
+  box-shadow: 0px 0px 0px 3px rgba(155,203,255,1);
+  outline: none;
+}</style></div><div class="hf s c wf ct cl"><div class="he height-px-40px bg-60-60-60-255 s r wf cl ccy"><u class="s e ctr ccy acr"><div class="hc p-15-0 fc-150-150-150-255 font-size-12 ah ar s r wc cl ccy"><div class="s e ic"><img class="s e" alt="white location icon" src="images/icons/place_white.svg"></div><div class="s t wc hc"> Hanse Aesthetic, Neuer Wall 72, 20345 Hamburg</div></div></u><u class="s e ctr ccy acr"><div class="hc p-15-0 fc-150-150-150-255 font-size-12 ah ar s r wc cl ccy"><div class="s e ic"><img class="s e" alt="white location icon" src="images/icons/email_white.svg"></div><div class="s t wc hc"> info@hanse-aesthetic.de</div></div></u><u class="s e ctr ccy acr"><div class="hc p-15-0 fc-150-150-150-255 font-size-12 ah ar s r wc cl ccy"><div class="s e ic"><img class="s e" alt=" white location icon" src="images/icons/phone_white.svg"></div><div class="s t wc hc">+49 40 30 70 69 42</div></div></u></div><div class="he height-px-80px bg-42-157-143-255 s r wf cl ccy"><div class="we width-px-250 he height-px-70px p-15-0 s e ic"><img class="we width-px-250 he height-px-70px s e" alt="Hanse Aesthetic company logo" src="images/icons/hanse_aesthetic.png"></div><u class="s e ctr ccy acr"><a class="hc ah ar p-5-0 tc fc-255-255-255-255 font-size-15 ff-arial ls-510 s e wc ccx ccy lnk" href="/" rel="noopener noreferrer"><div class="s t wf hf">HOME</div></a></u><u class="s e ctr ccy acr"><a class="hc ah ar p-5-0 tc fc-255-255-255-255 font-size-15 ff-arial ls-510 s e wc ccx ccy lnk" href="" rel="noopener noreferrer"><div class="s t wf hf">/  ÜBER UNS</div></a></u><u class="s e ctr ccy acr"><a class="hc ah ar p-5-0 tc fc-255-255-255-255 font-size-15 ff-arial ls-510 s e wc ccx ccy lnk" href="/treatments" rel="noopener noreferrer"><div class="s t wf hf">/  BEHANDLUNGEN</div></a></u><u class="s e ctr ccy acr"><a class="hc ah ar p-5-0 tc fc-255-255-255-255 font-size-15 ff-arial ls-510 s e wc ccx ccy lnk" href="" rel="noopener noreferrer"><div class="s t wf hf">/  ERFAHRUNGEN</div></a></u><u class="s e ctr ccy acr"><a class="hc ah ar p-5-0 tc fc-255-255-255-255 font-size-15 ff-arial ls-510 s e wc ccx ccy lnk" href="" rel="noopener noreferrer"><div class="s t wf hf">/  KONTAKT</div></a></u></div><div class="hf ah cx s c wf ct cl"><div class="nb e bh"><div class="hf transparency-102 s e wf" style="background:url("/images/praxis/wartezimmer.jpg") center / cover no-repeat;"></div></div><div class="hf p-20 spacing-0-20 ah cx sb b-1 s c wf ct cl"><div class="hc ah cx p-10 br-20 box-inset-255px255px765px255px100-100-100-255 b-1 s c max-width-1000 wf ct cl"><div class="nb e bh"><div class="hf transparency-128 bg-60-60-60-255 br-20 s e max-width-1000 wf"></div></div><div class="hc ah cx br-20 s r max-width-1000 wf cl ccy"><div class="hc spacing-0-20 av at s c max-width-600 wf ct cl"><div class="hf s e wf"><div class="s t wf hf">Brustkorrekturen</div></div><div class="hc s e wc"><div class="s t wf hf">Some description about what is going on in this section.</div></div></div><div class="hf br-20 s e wf"><div class="we width-px-350 he height-px-200px br-10 spacing-20-20 s e" style="background:url("/images/behandlungen/brust.jpg") center / cover no-repeat;"></div></div></div><div class="hf s e wf"><div class="cptr we width-px-30 he height-px-30px ah cx  box-inset0px0px1020px510px42-157-143-255-hv tfrm-0-0-0-230-230-255-0-0-255-0-act  br-15 b-1 s e ccx ccy sbt notxt" style="background:url("/images/icons/expand_black.svg") center / cover no-repeat;" role="button" tabIndex="0"></div></div></div><div class="hf ah cx p-0-10 br-20 box-inset-255px255px765px255px100-100-100-255 s c max-width-1000 wf ct cl"><div class="nb e bh"><div class="hf transparency-128 bg-60-60-60-255 br-20 s e max-width-1000 wf"></div></div><div class="hc ah cx br-20 s r max-width-1000 wf cl ccy"><div class="hc spacing-0-20 p-20 av at s c max-width-600 wf ct cl"><div class="hf s e wf"><div class="s t wf hf">Gesichtskorrekturen</div></div><div class="hc s e wc"><div class="s t wf hf">Some description about what is going on in this section.</div></div></div><div class="hf br-20 p-15 s e wf"><div class="we width-px-350 he height-px-200px br-10 spacing-20-20 s e" style="background:url("/images/behandlungen/face.jpg") center / cover no-repeat;"></div></div></div><div class="hf s e wf"><div class="cptr we width-px-30 he height-px-30px ah cx  box-inset0px0px1020px510px42-157-143-255-hv tfrm-0-0-0-230-230-255-0-0-255-0-act  br-15 b-1 s e ccx ccy sbt notxt" style="background:url("/images/icons/expand_black.svg") center / cover no-repeat;" role="button" tabIndex="0"></div></div></div></div></div><u class="s e ctr acb"><div class="he height-px-40px av ab bg-60-60-60-255 s r wf cl ccy"><u class="s e ctr ccy acr"><div class="hc p-15-0 fc-150-150-150-255 font-size-12 ah ar s r wc cl ccy"><div class="s e ic"><img class="s e" alt="white location icon" src="images/icons/place_white.svg"></div><div class="s t wc hc"> Hanse Aesthetic, Neuer Wall 72, 20345 Hamburg</div></div></u><u class="s e ctr ccy acr"><div class="hc p-15-0 fc-150-150-150-255 font-size-12 ah ar s r wc cl ccy"><div class="s e ic"><img class="s e" alt="white location icon" src="images/icons/email_white.svg"></div><div class="s t wc hc"> info@hanse-aesthetic.de</div></div></u><u class="s e ctr ccy acr"><div class="hc p-15-0 fc-150-150-150-255 font-size-12 ah ar s r wc cl ccy"><div class="s e ic"><img class="s e" alt=" white location icon" src="images/icons/phone_white.svg"></div><div class="s t wc hc">+49 40 30 70 69 42</div></div></u></div></u></div></div>
+    </body>
+  </html>
+  
